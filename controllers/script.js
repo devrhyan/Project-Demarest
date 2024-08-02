@@ -12,8 +12,7 @@ const block = document.querySelector('.block');
 hamburguer.addEventListener("click", ()=>{
     hamburguer.classList.toggle('active');
     navMenu.classList.toggle('active');
-    imgSocial.classList.toggle('active')
-    block.classList.toggle('active')
-    // teste.classList.toggle('active')
+    imgSocial.classList.toggle('active');
+    block.classList.toggle('active');
 });
 

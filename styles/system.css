@@ -399,6 +399,10 @@ hr {
 
 @media(max-width: 768px) {
 
+    body {
+        overflow-y: scroll !important;
+    }
+
     .hamburguer {
         display: block;
         padding: 15px;
@@ -434,7 +438,7 @@ hr {
         flex-direction: column;
         width: 100%;
         height: 45%;
-        transition: 1.5s;
+        transition: 1s;
         border-radius: 20px 20px 20px 20px;
         width: 96%;
         height: 47%;
@@ -443,6 +447,14 @@ hr {
         z-index: 99999099999999999;
         overflow-x: hidden;
 
+    }
+
+    .menu.active, .menu a {
+        color: white;
+        margin-top: 17px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -467,26 +479,22 @@ hr {
     }
 
 
-    .tittle-apps{
+    .tittle-apps {
         width: 100vw !important;
-        margin:  2rem auto;
+        margin: 2rem auto;
     }
-    /* .caixa-icones{
-        display: none;
-    } */
 
-    /* .caixa-icones{
-        width: 100%;
-    } */
-    /* 
-    .caixa-icones{
+    .container .container-carrossel {
+        margin: 2rem 7rem 0 0 !important;
+    }
+
+    body {
+        overflow-y: scroll !important;
+    }
+
+    .container{
         display: none;
     }
-} */
-
-.container .container-carrossel{
-    margin: 2rem 7rem 0 0 !important;
-}
 }
 
 /*Animation*/
@@ -510,9 +518,9 @@ hr {
     }
 }
 
-/* @media screen and (min-width: 576px) {
+@media screen and (min-width: 576px) {
     .container-carrossel {
       --widthItem: 200px;
       --heightItem: 200px;
     }
-  } */
+  }

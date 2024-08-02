@@ -420,9 +420,6 @@ li a {
         margin: 16px 0;
 
         z-index: 99999099999999999;
-        /* display: none; */
-        overflow: hidden;
-
     }
 
 
@@ -432,7 +429,10 @@ li a {
         margin-top: 26px;
         left: 0px;
     }
-
+    
+    .menu.active body{
+        overflow: hidden;
+    }
 }
 
 
@@ -463,7 +463,7 @@ li a {
 
 }
 
-@media(max-width: 476px) {
+@media(max-width: 576px) {
     .social p {
         font-size: 13px;
     }
