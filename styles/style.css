@@ -466,6 +466,7 @@ li a {
 @media(max-width: 576px) {
     .social p {
         font-size: 13px;
+        display: none;
     }
 
     .social img {
