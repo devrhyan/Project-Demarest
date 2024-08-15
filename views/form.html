@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demarest Formulário</title>
+    <link rel="stylesheet" href="/Styles/form2.css">
+    <link rel="stylesheet" href="/styles/global.css">
+
+</head>
+
+<body style="display: flex;   background: var(--blue) !important">
+    <div class="aneis">
+        <i style="--clr: #0c0634;"></i>
+        <i style="--clr: #af6c3c; "></i>
+        <i style="--clr:#00ffd5;"></i>
+        <div class="login">
+            <img src="/img/logo.png" alt="">
+            <!-- <div class="caixa-input">
+                <input type="text" placeholder="Email" required>
+            </div>
+            <div class="caixa-input">
+                <input type="password" placeholder="Senha" required>
+            </div> -->
+            <form class="form2" class="caixa-input">
+                <input type="text" placeholder="Email" required>
+                <button class="reset" type="reset">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </form>
+            <form class="form2" class="caixa-input">
+
+                <input type="password" placeholder="Senha" required>
+
+                <button class="reset" type="reset">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </form>
+            <div class="caixa-input"><a href="/views/index.html">
+                    <input type="submit" value="Acessar">
+                </a>
+            </div>
+            <div class="links">
+                <a href="#">Esqueceu sua senha?</a>
+                <a href="#">Cadastrar</a>
+            </div>
+        </div>
+    </div>
+    <script src="/controllers/form.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <script src="https://kit.fontawesome.com/6f5bcfa0c2.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="../styles/process.css">
+  <link rel="stylesheet" href="/styles/style.css">
+  <title>Demarest</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+
+<body class="block" style="background-color:rgb(245, 245, 245);">
+    <header>
+    <nav class="navbar">
+        <div class="container">
+            <a class="logo" href="#"> <img src="/img/logo.png"></a>
+            <ul class="menu" style="margin: 0 !important;">
+                <li><a href="./form.html">Login</a></li>
+                <li><a href="./index.html" class="active">Início</a></li>
+                <li><a href="./process.html">Processos</a></li>
+                <li><a href="./system.html">Sistemas</a></li>
+            </ul>
+            <div class="social">
+                <img src="/img/pessoa.png" alt="">
+                <p style="margin-bottom: 0;">Cláudio da Nóbrega</p>
+            </div>
+            <div class="hamburguer">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"><span>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <section class="block" style="max-width: 1330px; margin: 0 auto;">
+      <div class="social2"> <a href="./process.html"> <img src="../img/pessoa.png" alt=""> </a>
+        <div>
+          <h5 style="color: var(--blue);">Bom dia, <b>Cláudio!</b></h5> <a href="./process.html">
+            <p style=" color: var(--grey3); text-decoration: none; margin-left: -.1rem;">Você tem 3 mensagens não lidas
+            </p>
+          </a>
+        </div>
+        <div class="notification" style="margin-top: 1rem; margin-left: 1rem;"> <img
+            src="../img/sino-de-notificacao.png" alt=""> </div>
+      </div>
+    </section>
+
+  <section>
+    <div class="jobs-progress">
+      <h4>Trabalhos em andamento</h4>
+       <a href="#">Ver todos</a>
+    </div>
+    <div class="swiper">
+
+      <div class="swiper-wrapper" style=" width: 1330px;margin: 0 auto; margin-top: 2rem;">
+
+        <div class="swiper-slide" style="display: flex;">
+          <div class="work-in-progress" class="swiper-slide">
+            <section class="content-demarest" id="demarest-container">
+            </section>
+          </div>
+        </div>
+
+        <div class="swiper-slide" style="display: flex;">
+          <div class="work-in-progress" class="swiper-slide">
+            <section class="content-demarest" id="demarest-container">
+            </section>
+          </div>
+        </div>
+
+        <div class="swiper-slide" style="display: flex;">
+          <div class="work-in-progress" class="swiper-slide">
+            <section class="content-demarest" id="demarest-container">
+            </section>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-pagination" style="color: var(--orange); margin-bottom:-.7rem;"></div>
+
+      <div class="swiper-button-prev"
+        style="color: rgb(225, 225, 225); top: var(--swiper-navigation-top-offset, 53%) !important;"
+        onclick="fetchDataAndRender()">
+      </div>
+      <div class="swiper-button-next"
+        style="color: rgb(225, 225, 225); top: var(--swiper-navigation-top-offset, 53%) !important;"
+        onclick="fetchDataAndRender(), voltar()"></div>
+    </div>
+  </section>
+
+  <div class="work mt-5" style="margin-top:2rem; max-width: 1330px; margin: 0 auto; display: flex; gap:10rem;
+        text-align: center;text-align: center; justify-content: space-between; color: var(--blue);">
+    <h4>Boletos</h4> <a href="#" style="text-align: center;margin-top: .5rem; color: var(--grey-dark);">
+      Ver todos</a>
+  </div>
+
+
+  <section>
+    <div class="swiper" style="margin:1.5rem;">
+
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div id="demarest-container2">
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div id="demarest-container2">
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div id="demarest-container2">
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="swiper-pagination" style="display: none;"></div>
+
+      <div class="swiper-button-prev"
+        style="color: rgb(225, 225, 225); top: var(--swiper-navigation-top-offset, 50%) !important;"
+        onclick="fetchDataAndRender2()"></div>
+      <div class="swiper-button-next"
+        style="color: rgb(225, 225, 225); top: var(--swiper-navigation-top-offset, 50%) !important;"
+        onclick="fetchDataAndRender2()"></div>
+    </div>
+  </section>
+
+  <section style="max-width: 1330px; margin: 0 auto;">
+    <div class="news">
+      <h3>
+        Notícias recentes
+      </h3>
+      <a href="#" style="text-align: center;margin-top: 0.5rem; color: var(--grey-dark);"> Ver todos</a>
+    </div>
+    <div class="recent-news">
+      <div class="newsletter">
+        <a href="http://">
+          <img src="../img/news1.png" alt="">
+          <p><b>O Pacto Nacional do judiciário para a Equidade Racial e o pacto narcísio da branquitude</b><br>
+            <span style="color: var(--grey-dark);">20/11/2023</span>
+          </p>
+        </a>
+      </div>
+      <div class="newsletter">
+        <a href="http://">
+          <img src="../img/news2.png" alt="   ">
+          <p><b>Racismo estrutural e a inserção da população negra na advocacia privada</b><br>
+            <span style="color: var(--grey-dark);">20/11/2023</span>
+          </p>
+        </a>
+      </div>
+      <div class="newsletter">
+        <a href="http://">
+          <img src="../img/news1.png" alt="">
+          <p><b>O Pacto Nacional do judiciário para a Equidade Racial e o pacto narcísio da branquitude</b><br>
+            <span style="color: var(--grey-dark);">20/11/2023</span>
+          </p>
+        </a>
+      </div>
+      <div class="newsletter">
+        <a href="http://">
+          <img src="../img/news2.png" alt="">
+          <p><b>Racismo estrutural e a inserção da população negra na advocacia privada</b><br>
+            <span style="color: var(--grey-dark);">20/11/2023</span>
+          </p>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="max-width: 1330px; margin: 0 auto;">
+    <div class="communication">
+      <h4>
+        Fale conosco
+      </h4>
+      <div class="contacts">
+        <div class="our-contacts">
+          <a href="">
+            <div class="email">
+              <img src="../img/e-mail.png" alt="">
+            </div>
+            <div class="form">
+              <h6>Formulário de Contato</h6>
+              <p>Mande-nos sua mensagem preenchendo o formulário de contato</p>
+            </div>
+          </a>
+        </div>
+        <div class="our-contacts">
+          <a href="">
+            <div class="atendimento">
+              <img src="../img/central-de-atendimento.png" alt="">
+            </div>
+            <div class="form">
+              <h6>Ouvidoria</h6>
+              <p>Fale agora com uma de nossas atendentes</p>
+            </div>
+          </a>
+        </div>
+        <div class="our-contacts">
+          <a href="">
+            <div class="advogados">
+              <img src="../img/simbolo-de-equilibrio-da-escala-de-libra.png" alt="">
+            </div>
+            <div class="form">
+              <h6>Advogados</h6>
+              <p>Encontre os advogados responsáveis nos dados do seu processo</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="rodape">
+    <div>
+      <p><a href="\"></a>Termos de uso</a></p>
+    </div>
+    <div>
+      <p><a href="\"></a>Política de privacidade</a></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="/controllers/caroussel.js"></script>
+  <script src="/controllers/script.js"></script>
+  <script src="/controllers/fetchDataAndRender.js"></script>
+  <script src="/controllers/fetchDataAndRender2.js"></script>
+</body>
+
+</html>

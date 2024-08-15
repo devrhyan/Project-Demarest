@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/6f5bcfa0c2.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <script src="/controllers/apexcharts.min.js"></script>
+    <title>Demarest</title>
+</head>
+
+<body class="block">
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a class="logo" href="#"> <img src="/img/logo.png"></a>
+                <ul class="menu">
+                    <li><a href="./form.html">Login</a></li>
+                    <li><a href="./index.html">Início</a></li>
+                    <li><a href="#">Processos</a></li>
+                    <li><a href="./system.html">Sistemas</a></li>
+                </ul>
+                <div class="social">
+                    <img src="/img/pessoa.png" alt="">
+                    <p>Cláudio da Nóbrega</p>
+                </div>
+                <div class="hamburguer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"><span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="arrow">
+                <div class="arrow-left">
+
+                    <a href="/views/index.html"><img src="/img/arrow-left.png"></a>
+
+                </div>
+            </div>
+            <div class="process">
+                <h5>Processo</h5>
+                <h2>0001934-14.2013.5.10.0008</h2>
+                <p>Ação de Rito Ordinário</p>
+                <p>30 Vara Cível ° Salvador/BA</p>
+            </div>
+        </section>
+        <section>
+            <div class="data-link">
+
+                <a href="">
+                    <div class="menu-data">Dados gerais </div>
+                </a>
+                <a href="">
+                    <div class="menu-data">Contatos</div>
+                </a>
+                <a href="">
+                    <div class="menu-data">Relatórios</div>
+                </a>
+                <a href="">
+                    <div class="menu-data">Gráficos</div>
+                </a>
+            </div>
+
+            <div class="cards">
+                <div class="card1">
+
+                    <h4>Cliente</h4>
+                    <p>Chubb Seguros Brasil S.A</p>
+                    <br>
+
+                    <h4> Parte Requerente</h4>
+                    <p>Marta Santos Bozzo</p>
+                    <br>
+
+                    <h4>Parte Requerida</h4>
+                    <p>Itaú Seguros Soluções Corporativas S.A.</p>
+                    <br>
+
+                    <h4>Sumário</h4>
+                    <p>A autora que sofria deintermináveis dores de cabeça passou por médicos e
+                        tratamentos em sua cidade. Em 20/04 o neurologista que tratava diagnosticou
+                        um tumor no sei cavernoso</p>
+
+                </div>
+
+                <div class="card2-title">
+                    <h3>Consumo total do contrato</h3>
+                    <div class="card2">
+                        <div id="grafico">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="values">
+            <div class="values-involved">
+                <h3>Valor envolvido</h3>
+                <div class="value">
+                    <div>
+                        <h5>Originário</h5>
+                        <p>R$ 800.000,00</p>
+                        <br>
+                        <h5>Total atualizado + juros</h5>
+                        <p>R$ 928.839,60</p>
+                    </div>
+                    <br>
+                    <div>
+                        <h5>Originário</h5>
+                        <p>R$ 800.000,00</p>
+                        <br>
+                        <h5>Total atualizado + juros</h5>
+                        <p>R$ 928.839,60</p>
+                    </div>
+                </div>
+            </div>
+            <div class="classification">
+                <h3>Classificação</h3>
+                <div class="classification-two">
+                    <h5>Probabilidade de perda</h5>
+                    <p>--</p>
+                    <br>
+                    <h5>Previsão de término</h5>
+                    <p>-- / -- / ---- </p>
+                </div>
+            </div>
+            <div class="payments">
+                <h3>Garantias e pagamentos</h3>
+                <div class="classification-tree">
+                    <h5>Garantias</h5>
+                    <p>R$ 0,00</p>
+                    <br>
+                    <h5>Pagamentos</h5>
+                    <p>R$ 0,00</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape">
+        <div>
+            <p><a href="\"></a>Termos de uso</a></p>
+        </div>
+        <div>
+            <p><a href="\"></a>Política de privacidade</a></p>
+        </div>
+    </footer>
+    <script>
+        let elemento = document.getElementById('grafico');
+        let options = {
+            chart: {
+                heigth: 280,
+                type: 'radialBar'
+            },
+
+            series: [75],
+            colors: ["var(--orange)"],
+            plotOptions: {
+                radialBar: {
+                    startAngle: -90,
+                    endAngle: 90,
+                    track: {
+                        background: 'var(--grey-light)',
+                        startAngle: -90,
+                        endAngle: 90,
+                    },
+                    dataLabels: {
+                        name: {
+
+                            show: false,
+                        },
+                        value: {
+                            fontSize: "40px",
+                            show: true,
+                        }
+                    }
+                }
+            },
+            stroke: {
+                lineCap: "butt"
+            },
+            labels: ["Progress"]
+        };
+
+        let chart = new ApexCharts(elemento, options);
+        chart.render();
+
+    </script>
+    <script src="/controllers/script.js"></script>
+    <script src="/controllers/cards.js"></script>
+</body>
+
+</html>
