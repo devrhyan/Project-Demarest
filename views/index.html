@@ -84,15 +84,16 @@
 
       </div>
       <div class="swiper-pagination" style="color: var(--orange); margin-bottom:-.7rem;"></div>
-
-      <div class="swiper-button-prev"
-        style="color: rgb(225, 225, 225); top: var(--swiper-navigation-top-offset, 53%) !important;"
-        onclick="fetchDataAndRender()">
-      </div>
-      <div class="swiper-button-next"
-        style="color: rgb(225, 225, 225); top: var(--swiper-navigation-top-offset, 53%) !important;"
-        onclick="fetchDataAndRender(), voltar()"></div>
-    </div>
+      <div class="swiper-button-prev" id="back-button"
+      style="color: rgb(225, 225, 225); top: var(--swiper-navigation-top-offset, 53%) !important;"
+      onclick="backCards()">
+ </div>
+ <div class="swiper-button-next" id="next-button"
+      style="color: rgb(225, 225, 225); top: var(--swiper-navigation-top-offset, 53%) !important;"
+      onclick="nextCards()">
+ </div>
+ <div id="demarest-container"></div>
+ 
   </section>
 
   <div class="work mt-5" style="margin-top:2rem; max-width: 1330px; margin: 0 auto; display: flex; gap:10rem;
@@ -127,9 +128,9 @@
 
       <div class="swiper-pagination" style="display: none;"></div>
 
-      <div class="swiper-button-prev"
+      <div class="swiper-button-prev" id="back-button2"
         style="color: rgb(225, 225, 225); top: var(--swiper-navigation-top-offset, 50%) !important;"
-        onclick="fetchDataAndRender2()"></div>
+        onclick="backCards2()"></div>
       <div class="swiper-button-next"
         style="color: rgb(225, 225, 225); top: var(--swiper-navigation-top-offset, 50%) !important;"
         onclick="fetchDataAndRender2()"></div>

@@ -49,5 +49,21 @@
         });
       });
     }
+
+    fetchDataAndRender2();
+    
+    function backCards2() {
+      const isMobile2 = window.innerWidth <= 768;
+      const numCardsParaExibir2 = isMobile2 ? 1 : 4;
+      contador2 -= numCardsParaExibir2;
+      if (contador2 < 0) {
+        contador2 = 0;
+      }
+      fetchDataAndRender2();
+  console.log("Está funcionando!")
+
+    }
+    
+    document.getElementById("back-button2").addEventListener("onclick", backCards2);
     
     fetchDataAndRender2();
