@@ -21,23 +21,26 @@ function fetchDataAndRender():void {
   fetch("/mock/db.json").then((response) => {
     response.json().then((db) => {
       const container = document.getElementById("demarest-container");
+      
+      // Verificar a largura da tela
+      const isMobile = window.innerWidth <= 768;
 
       // Limitar o número de cards a exibir (por exemplo, 4)
-      const numCardsParaExibir = 4;
-      const inicio = contador + numCardsParaExibir;
+      const numCardsParaExibir = isMobile? 1 :4;
+      const inicio = contador;
       const fim = inicio + numCardsParaExibir;
-      const cardsParaExibir = db.dados.slice(inicio, fim);
-
-      // Verificar se há dados suficientes para exibir
-    if (cardsParaExibir.length === 0) {
-        console.log('Não há dados suficientes para exibir');
-            return;
+      
+      if(inicio >= db.dados.length){
+        contador = 0;
+        return fetchDataAndRender()
       }
+
+      const cardsParaExibir = db.dados.slice(inicio, fim);
 
     if(container){
         container.innerHTML = " ";
 
-        cardsParaExibir.forEach((data) => {
+        cardsParaExibir.forEach((data):void => {
         // CRIANDO O CARD
         const card = document.createElement("div");
         card.classList.add("card");
@@ -103,11 +106,27 @@ function fetchDataAndRender():void {
 
         container.appendChild(card);
       });
-      // Incrementa o contador
-      contador+=4;
-    }else{
-        console.error('Elemento não encontrado!')
     }
     });
   });
 }
+
+function backCards():void{
+  const isMobile = window.innerWidth <= 768;
+  const numCardsParaExibir = isMobile? 1 : 4;
+  contador -= numCardsParaExibir;
+  if(contador < 0){
+    contador = 0;
+  }
+ fetchDataAndRender();
+}
+
+function nextCards():void{
+  const isMobile = window.innerWidth <= 768;
+  const numCardsParaExibir = isMobile? 1 : 4;
+  contador += numCardsParaExibir;
+  fetchDataAndRender();
+}
+
+document.getElementById("back-button").onclick = backCards;
+document.getElementById("next-button").onclick = nextCards;
