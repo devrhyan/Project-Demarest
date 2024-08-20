@@ -1,13 +1,13 @@
-interface Data2{
-  fat:string,
-  valor:number,
-  date:string,
-  pagamento:string
+interface Data2 {
+  fat: string;
+  valor: number;
+  date: string;
+  pagamento: string;
 }
 
-let contador2:number = 0;
+let contador2: number = 0;
 
-function fetchDataAndRender2():void {
+function fetchDataAndRender2(): void {
   fetch("/mock/db-two.json").then((response) => {
     response.json().then((db) => {
       const container = document.getElementById("demarest-container2");
@@ -26,7 +26,7 @@ function fetchDataAndRender2():void {
 
       container.innerHTML = "";
 
-      cardsParaExibir2.forEach((data):void => {
+      cardsParaExibir2.forEach((data): void => {
         const card3 = document.createElement("div");
         card3.classList.add("card3");
 
@@ -66,8 +66,7 @@ function backCards2() {
     contador2 = 0;
   }
   fetchDataAndRender2();
-console.log("Está funcionando!")
-
+  console.log("Está funcionando!");
 }
 
 document.getElementById("back-button2").addEventListener("onclick", backCards2);
